@@ -32,26 +32,25 @@ This is the file that must be used to configure the standard for publication on 
 
 This is the name of the data standard, e.g. *Applicatieprofiel LDES* or *Vocabularium Persoon*.
 
-### `type`
+### `category`
 
-The type of the data standard. Allowed values are:
+The category of the data standard. Allowed values are:
 - Applicatieprofiel
 - Vocabularium
 - Implementatiemodel
 - Technische standaard
-- Standaard voor organisatorische interoperabiliteit
+- Organisatorische interoperabiliteit
 
 ### `usage`
 
 Is the usage of the data standard mandatory or recommended? Allowed values are:
 - Aanbevolen (vrijwillig)
 - Verplicht
+- Pas toe of leg uit
 
 ### `repsonsibleOrganisation`
 
 The name of the organisation that is responsible for the data standard.
-
-### `responsibleOrganisationUri`
 
 #### `name`
 
@@ -73,14 +72,14 @@ The name of the Markdown file (stored in the `descriptions` folder) that contain
 
 ### `specificationDocuments`
 
-Links to the application profile(s) or vocabulary. This **must** always be an array of objects with the properties `name` and `link`.
+Links to the application profile(s) or vocabulary. This **must** always be an array of objects with the properties `name` and `uri`.
 
 #### Example
 ```json
-"specificationDocument": [
+"specificationDocuments": [
     {
         "name": "Applicatieprofiel LDES",
-        "link": "https://data.vlaanderen.be/doc/applicatieprofiel/ldes"
+        "uri": "https://data.vlaanderen.be/doc/applicatieprofiel/ldes"
     }
 ]
 ```
@@ -89,7 +88,7 @@ Links to the application profile(s) or vocabulary. This **must** always be an ar
 
 Additional documentation to be displayed on the detail page of the data standard, e.g. a mapping described in an Excel file or link to external specification.
 
-This **must** always be an array of objects containing the properties `name` and `link` or `fileName`. Using the `link` means you link to an URL, while using `fileName` means you want to link to a document that was stored in the `documentation` folder.
+This **must** always be an array of objects containing the properties `name` and `uri` or `fileName`. Using the `link` means you link to an URL, while using `fileName` means you want to link to a document that was stored in the `documentation` folder.
 
 #### Example
 ```json
@@ -100,7 +99,7 @@ This **must** always be an array of objects containing the properties `name` and
     },
     {
         "name": "Link naar externe spec",
-        "link": "https://example.org/externalSpec"
+        "uri": "https://example.org/externalSpec"
     }
 ]
 ```
@@ -121,7 +120,7 @@ The OSLO charter that will be displayed on the detail page of the data standard.
 
 Reports made of the workshop to be displayed on the detail page of the data standard.
 
-This **must** always be an array of objects containing the properties `name` and `link` or `fileName`. Using the `link` means you link to an URL, while using `fileName` means you want to link to a report that was stored in the `reports` folder.
+This **must** always be an array of objects containing the properties `name` and `fileName`. Using `fileName` means you want to link to a report that was stored in the `reports` folder.
 
 #### Example
 ```json
@@ -137,7 +136,7 @@ This **must** always be an array of objects containing the properties `name` and
 
 Presentations that were used during the workshop and must be displayed on the detail page of the data standard.
 
-This **must** always be an array of objects containing the properties `name` and `link` or `fileName`. Using the `link` means you link to an URL, while using `fileName` means you want to link to a presentation that was stored in the `presentations` folder.
+This **must** always be an array of objects containing the properties `name` and `fileName`. Using `fileName` means you want to link to a presentation that was stored in the `presentations` folder.
 
 #### Example
 ```json
@@ -149,10 +148,6 @@ This **must** always be an array of objects containing the properties `name` and
     {
         "name": "Presentatie workshop 2",
         "fileName": "presentatie-workshop-2.pptx"
-    },
-    {
-        "name": "Presentatie workshop 3",
-        "link": "https://docs.google.com/presentation/d/presentatie-workshop-3"
     }
 ]
 ```
@@ -161,10 +156,10 @@ This **must** always be an array of objects containing the properties `name` and
 
 The date on which the data standard was announced on the working group 'Data Standards'.
 
-### `dateOfAcknowledgementByWorkingGroup`
+### `dateRecognitionWorkgroup`
 
 The date on which the data standard was accepted as an acknowledged standard by the working group 'Data standards'.
 
-### `dateOfAcknowledgementBySteeringCommittee`
+### `dateRecognitionSteeringCommittee`
 
 The date on which the data standard was accepted as an acknowledged standard by the steering committee 'Flemish Information and ICT policy'.
