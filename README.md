@@ -88,7 +88,7 @@ Links to the application profile(s) or vocabulary. This **must** always be an ar
 
 Additional documentation to be displayed on the detail page of the data standard, e.g. a mapping described in an Excel file or link to external specification.
 
-This **must** always be an array of objects containing the properties `name` and `uri` or `fileName`. Using the `link` means you link to an URL, while using `fileName` means you want to link to a document that was stored in the `documentation` folder.
+This **must** always be an array of objects containing the properties `name` and `uri` or `fileName`. Using the `uri` means you link to an URL, while using `fileName` means you want to link to a document that was stored in the `documentation` folder.
 
 #### Example
 ```json
