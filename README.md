@@ -88,31 +88,31 @@ Links to the application profile(s) or vocabulary. This **must** always be an ar
 
 Additional documentation to be displayed on the detail page of the data standard, e.g. a mapping described in an Excel file or link to external specification.
 
-This **must** always be an array of objects containing the properties `name` and `uri` or `fileName`. Using the `uri` means you link to an URL, while using `fileName` means you want to link to a document that was stored in the `documentation` folder.
+This **must** always be an array of objects containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `documentation` folder. In that case you can write the name of the file.
 
 #### Example
 ```json
 "documentation": [
     {
         "name": "Voorbeeld van een mapping",
-        "fileName": "mapping-voorbeeld.xlsx"
+        "resourceReference": "mapping-voorbeeld.xlsx"
     },
     {
         "name": "Link naar externe spec",
-        "uri": "https://example.org/externalSpec"
+        "resourceReference": "https://example.org/externalSpec"
     }
 ]
 ```
 
 ### `charter`
 
-The OSLO charter that will be displayed on the detail page of the data standard. This **must** always be an object containing the properties `name` and `fileName`. The value of `fileName` must be the name of the document which was stored in the `charter` folder.
+The OSLO charter that will be displayed on the detail page of the data standard. This **must** always be an object containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `charter` folder. In that case you can write the name of the file.
 
 #### Example
 ```json
 "charter": {
     "name": "OSLO Charter",
-    "fileName": "oslo-charter.docx"
+    "resourceReference": "oslo-charter.docx"
 }
 ```
 
@@ -120,14 +120,14 @@ The OSLO charter that will be displayed on the detail page of the data standard.
 
 Reports made of the workshop to be displayed on the detail page of the data standard.
 
-This **must** always be an array of objects containing the properties `name` and `fileName`. Using `fileName` means you want to link to a report that was stored in the `reports` folder.
+This **must** always be an array of objects containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `reports` folder. In that case you can write the name of the file.
 
 #### Example
 ```json
 "reports": [
     {
         "name": "Verslag workshop 1",
-        "fileName": "verslag-workshop-1.docx"
+        "resourceReference": "verslag-workshop-1.docx"
     }
 ]
 ```
@@ -136,18 +136,18 @@ This **must** always be an array of objects containing the properties `name` and
 
 Presentations that were used during the workshop and must be displayed on the detail page of the data standard.
 
-This **must** always be an array of objects containing the properties `name` and `fileName`. Using `fileName` means you want to link to a presentation that was stored in the `presentations` folder.
+This **must** always be an array of objects containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `presentations` folder. In that case you can write the name of the file
 
 #### Example
 ```json
 "presentations": [
     {
         "name": "Presentatie workshop 1",
-        "fileName": "presentatie-workshop-1.pptx"
+        "resourceReference": "presentatie-workshop-1.pptx"
     },
     {
         "name": "Presentatie workshop 2",
-        "fileName": "presentatie-workshop-2.pptx"
+        "resourceReference": "presentatie-workshop-2.pptx"
     }
 ]
 ```
