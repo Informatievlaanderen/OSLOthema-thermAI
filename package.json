@@ -2,16 +2,14 @@
   "name": "oslothema-template-configuration",
   "version": "1.0.0",
   "description": "A script to generate a JSON schema from a TypeScript configuration",
-  "main": "index.js",
+  "main": "ts-to-json-schema.js",
   "scripts": {
-    "build": "tsc",
-    "build:clean": "tsc --build --clean && tsc"
+    "run": ".github/scripts/run_generate_configuration_schema.sh"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.6.2",
     "ts-json-schema-generator": "^1.5.0"
   },
   "devDependencies": {
