@@ -29,6 +29,7 @@ jobs:
           ls source/
           mkdir -p target/schemas
           cp -r source/schemas/* target/schemas/*
+          ls target/schemas
   verify-json-validation:
     # Wait for previous job to make sure the schemas folder and configuration schema are created before running this job
     needs: copy-configuration-files
