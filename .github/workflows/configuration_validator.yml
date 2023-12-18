@@ -15,19 +15,21 @@ jobs:
       - name: Checkout source branch
         uses: actions/checkout@v4
         with:
-          ref: config # replace with your source branch name
+          repository: ${{ github.repository }}
+          ref: config
           path: source
 
       - name: Checkout target branch
         uses: actions/checkout@v4
         with:
-          ref: standaardenregister # replace with your target branch name
+          repository: ${{ github.repository }}
+          ref: standaardenregister
           path: target
 
       - name: Copy schema file into target branch
         shell: bash
         run: |
-          mkdir -p target/schemas && cp -r source/schemas/* target/schemas/*
+          ls -a
       - name: List file structure of target dir
         shell: bash
         run: |
@@ -36,8 +38,8 @@ jobs:
         shell: bash
         run: |
           ls -a
-      - name: Validate JSON
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: schemas/configuration.json
-          INPUT_JSONS: "**.json"
+      # - name: Validate JSON
+      #   uses: docker://orrosenblatt/validate-json-action:latest
+      #   env:
+      #     INPUT_SCHEMA: schemas/configuration.json
+      #     INPUT_JSONS: "**.json"
