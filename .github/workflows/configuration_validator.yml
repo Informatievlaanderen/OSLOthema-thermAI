@@ -39,3 +39,4 @@ jobs:
         with:
           schema: source/schemas/configuration.json
           files: target/ap-or-voc-config.json
+          strict: false
