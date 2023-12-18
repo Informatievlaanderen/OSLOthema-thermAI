@@ -24,10 +24,11 @@ jobs:
           repository: ${{ github.repository }}
           ref: standaardenregister
           path: target
-
+      # Extra step to debug the file structure
       - name: List file structure of source dir
         shell: bash
         run: |
+          echo ${{ github.repository }}
           ls source
       - name: List file structure of target dir
         shell: bash
