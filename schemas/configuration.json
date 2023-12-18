@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Configuration": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "usage": {
+          "type": "string"
+        },
+        "responsibleOrganisation": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "uri": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "uri"
+          ],
+          "additionalProperties": false
+        },
+        "publicationDate": {
+          "type": "string"
+        },
+        "descriptionFileName": {
+          "type": "string"
+        },
+        "specificationDocuments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Document"
+          }
+        },
+        "documentation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Document"
+          }
+        },
+        "charter": {
+          "$ref": "#/definitions/Document"
+        },
+        "reports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Document"
+          }
+        },
+        "presentations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Document"
+          }
+        },
+        "dateOfRegistration": {
+          "type": "string"
+        },
+        "dateOfAcknowledgementByWorkingGroup": {
+          "type": "string"
+        },
+        "dateOfAcknowledgementBySteeringCommittee": {
+          "type": "string"
+        },
+        "fileName": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "category",
+        "usage",
+        "responsibleOrganisation",
+        "publicationDate",
+        "descriptionFileName",
+        "specificationDocuments",
+        "documentation",
+        "charter",
+        "reports",
+        "presentations",
+        "dateOfRegistration",
+        "dateOfAcknowledgementByWorkingGroup",
+        "dateOfAcknowledgementBySteeringCommittee"
+      ],
+      "additionalProperties": false
+    },
+    "Document": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "resourceReference": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
