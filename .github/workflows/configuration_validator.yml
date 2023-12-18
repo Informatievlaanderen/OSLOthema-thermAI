@@ -29,11 +29,11 @@ jobs:
       - name: Copy schema file into target branch
         shell: bash
         run: |
-          ls -a
+          ls /source
       - name: List file structure of target dir
         shell: bash
         run: |
-          ls target/schemas
+          ls /target
       - name: list folder structure
         shell: bash
         run: |
