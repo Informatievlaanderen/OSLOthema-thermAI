@@ -29,15 +29,19 @@ jobs:
       - name: List file structure of target dir
         shell: bash
         run: |
-          ls source
+          ls source/schemas
       - name: List file structure of target dir
         shell: bash
         run: |
           ls target
-      - name: Copy schema files from source to target
+      - name: Create /schemas inside target dir
         shell: bash
         run: |
           mkdir -p target/schemas && cp -r source/schemas/* target/schemas/*
+      - name: Copy schema from /source/schemas dir to /target/schemas dir
+        shell: bash
+        run: |
+          cp -r source/schemas/* target/schemas/*
       - name: list folder structure
         shell: bash
         run: |
