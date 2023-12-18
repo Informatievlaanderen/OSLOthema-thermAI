@@ -25,15 +25,16 @@ jobs:
           path: target
 
       - name: Copy schema file into target branch
+        shell: bash
         run: |
-          ls source/
           mkdir -p target/schemas
           cp -r source/schemas/* target/schemas/*
-          ls target/schemas
       - name: List file structure of target dir
+        shell: bash
         run: |
           ls target/schemas
       - name: list folder structure
+        shell: bash
         run: |
           ls -a
       - name: Validate JSON
