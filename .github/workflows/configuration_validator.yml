@@ -30,6 +30,9 @@ jobs:
           mkdir -p target/schemas
           cp -r source/schemas/* target/schemas/*
           ls target/schemas
+      - name: List file structure of target dir
+        run: |
+          ls target/schemas
       - name: list folder structure
         run: |
           ls -a
