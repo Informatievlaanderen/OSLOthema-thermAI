@@ -38,4 +38,4 @@ jobs:
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
           INPUT_SCHEMA: source/schemas/configuration.json
-          INPUT_JSONS: "target/ap-or-voc-config.json"
+          INPUT_JSONS: "target/*.json"
