@@ -39,5 +39,5 @@ jobs:
         with:
           json_schema: source/schemas/configuration.json
           json_extension: json
-          files: target/*.json
+          base_dir: target
           use_gitignore: false
