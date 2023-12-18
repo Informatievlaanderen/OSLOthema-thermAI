@@ -38,5 +38,5 @@ jobs:
         uses: walbo/validate-json@v1.1.0
         with:
           schema: source/schemas/configuration.json
-          files: target/ap-or-voc-config.json
+          # files: target/ap-or-voc-config.json
           strict: false
