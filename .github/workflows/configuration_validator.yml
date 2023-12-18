@@ -35,8 +35,7 @@ jobs:
           ls source/schemas
           ls target
       - name: Validate JSON
-        uses: walbo/validate-json@v1.1.0
+        uses: GrantBirki/json-yaml-validate
         with:
-          schema: source/schemas/configuration.json
-          # files: target/ap-or-voc-config.json
-          strict: false
+          json_schema: source/schemas/configuration.json
+          files: target
