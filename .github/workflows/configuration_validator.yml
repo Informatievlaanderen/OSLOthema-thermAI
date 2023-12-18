@@ -26,7 +26,7 @@ jobs:
           ref: standaardenregister
           path: target
 
-      - name: Copy schema file into target branch
+      - name: List file structure of target dir
         shell: bash
         run: |
           ls source
@@ -34,10 +34,14 @@ jobs:
         shell: bash
         run: |
           ls target
+      - name: Copy schema files from source to target
+        shell: bash
+        run: |
+          mkdir -p target/schemas 
       - name: list folder structure
         shell: bash
         run: |
-          ls -a
+          ls target
       # - name: Validate JSON
       #   uses: docker://orrosenblatt/validate-json-action:latest
       #   env:
