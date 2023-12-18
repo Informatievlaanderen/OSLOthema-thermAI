@@ -5,6 +5,7 @@ const path = require("path");
 /** @type {import('ts-json-schema-generator/dist/src/Config').Config} */
 const config = {
   path: path.join(__dirname, "/types/configuration.ts"),
+  tsconfig: path.join(__dirname, "tsconfig.json"),
   type: "*", // Or <type-name> if you want to generate schema for that one type only
 };
 
