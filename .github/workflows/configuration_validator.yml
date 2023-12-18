@@ -3,7 +3,7 @@ name: Validate JSONs
 on: [push]
 
 jobs:
-  fetch-configuration-files:
+  copy-configuration-files:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -11,25 +11,25 @@ jobs:
         # Different Node versions. Each node version will trigger the action
         node-version:
           - 18.x
-        steps:
-          - name: Checkout source branch
-            uses: actions/checkout@v4
-            with:
-              ref: config # replace with your source branch name
-              path: source
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+        with:
+          ref: config # replace with your source branch name
+          path: source
 
-          - name: Checkout target branch
-            uses: actions/checkout@v4
-            with:
-              ref: standaardenregister # replace with your target branch name
-              path: target
+      - name: Checkout target branch
+        uses: actions/checkout@v4
+        with:
+          ref: standaardenregister # replace with your target branch name
+          path: target
 
-          - name: Copy files
-            run: |
-              ls -la
+      - name: Copy files
+        run: |
+          ls -la
   verify-json-validation:
     # Wait for previous job to make sure the schemas folder and configuration schema are created before running this job
-    needs: fetch-configuration-files
+    needs: copy-configuration-files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
