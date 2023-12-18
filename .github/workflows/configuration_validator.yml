@@ -26,28 +26,17 @@ jobs:
           ref: standaardenregister
           path: target
 
+      - name: List file structure of source dir
+        shell: bash
+        run: |
+          ls source
       - name: List file structure of target dir
         shell: bash
         run: |
           ls source/schemas
-      - name: List file structure of target dir
-        shell: bash
-        run: |
           ls target
-      - name: Create /schemas inside target dir
-        shell: bash
-        run: |
-          mkdir -p target/schemas && cp -r source/schemas/* target/schemas/*
-      - name: Copy schema from /source/schemas dir to /target/schemas dir
-        shell: bash
-        run: |
-          cp -r source/schemas/* target/schemas/*
-      - name: list folder structure
-        shell: bash
-        run: |
-          ls target/schemas
-      # - name: Validate JSON
-      #   uses: docker://orrosenblatt/validate-json-action:latest
-      #   env:
-      #     INPUT_SCHEMA: schemas/configuration.json
-      #     INPUT_JSONS: "**.json"
+      - name: Validate JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: source/schemas/configuration.json
+          INPUT_JSONS: "target/**.json"
