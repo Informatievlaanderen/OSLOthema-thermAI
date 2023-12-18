@@ -38,4 +38,6 @@ jobs:
         uses: GrantBirki/json-yaml-validate@v2.4.0
         with:
           json_schema: source/schemas/configuration.json
-          files: target/*.json
+          json_extension: json
+          files: target/ap-or-voc-config.json
+          use_gitignore: false
