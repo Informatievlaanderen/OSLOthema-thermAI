@@ -26,6 +26,8 @@ jobs:
 
       - name: Copy schema file into target branch
         run: |
+          ls source/
+          mkdir -p target/schemas
           cp -r source/schemas/* target/schemas/*
   verify-json-validation:
     # Wait for previous job to make sure the schemas folder and configuration schema are created before running this job
