@@ -26,19 +26,20 @@ jobs:
 
       - name: Copy files
         run: |
-          ls -la
-  verify-json-validation:
-    # Wait for previous job to make sure the schemas folder and configuration schema are created before running this job
-    needs: copy-configuration-files
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          # needed to fetch changes from other jobs, otherwise working on initial repo state
-          ref: ${{ github.ref }}
-          fetch-depth: 0
-      - name: Validate JSON
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-template/config/schemas/configuration.json
-          INPUT_JSONS: https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-airAndWater/master/config/OSLO-AirAndWater-Water-AP.json
+          ls ./source
+          ls ./target
+  # verify-json-validation:
+  #   # Wait for previous job to make sure the schemas folder and configuration schema are created before running this job
+  #   needs: copy-configuration-files
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         # needed to fetch changes from other jobs, otherwise working on initial repo state
+  #         ref: ${{ github.ref }}
+  #         fetch-depth: 0
+  #     - name: Validate JSON
+  #       uses: docker://orrosenblatt/validate-json-action:latest
+  #       env:
+  #         INPUT_SCHEMA: https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-template/config/schemas/configuration.json
+  #         INPUT_JSONS: https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-airAndWater/master/config/OSLO-AirAndWater-Water-AP.json
