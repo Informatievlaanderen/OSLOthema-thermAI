@@ -41,7 +41,7 @@ jobs:
       - name: list folder structure
         shell: bash
         run: |
-          ls target
+          ls target/schemas
       # - name: Validate JSON
       #   uses: docker://orrosenblatt/validate-json-action:latest
       #   env:
