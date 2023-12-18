@@ -35,7 +35,7 @@ jobs:
           ls source/schemas
           ls target
       - name: Validate JSON
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: source/schemas/configuration.json
-          INPUT_JSONS: "target/*.json"
+        uses: walbo/validate-json@v1.1.0
+        with:
+          files: target/*.json
+          schema: source/schemas/configuration.json
