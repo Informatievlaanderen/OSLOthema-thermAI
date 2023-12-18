@@ -38,4 +38,4 @@ jobs:
         uses: GrantBirki/json-yaml-validate@v2.4.0
         with:
           json_schema: source/schemas/configuration.json
-          files: target
+          files: target/*.json
