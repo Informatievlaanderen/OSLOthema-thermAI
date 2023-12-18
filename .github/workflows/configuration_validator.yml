@@ -35,7 +35,7 @@ jobs:
           ls source/schemas
           ls target
       - name: Validate JSON
-        uses: GrantBirki/json-yaml-validate
+        uses: GrantBirki/json-yaml-validate@v2.4.0
         with:
           json_schema: source/schemas/configuration.json
           files: target
