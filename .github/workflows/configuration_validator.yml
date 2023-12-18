@@ -11,21 +11,22 @@ jobs:
         # Different Node versions. Each node version will trigger the action
         node-version:
           - 18.x
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ github.repository }}
-          ref: config
-          path: Informatievlaanderen/OSLOthema-template
+        steps:
+          - name: Checkout source branch
+            uses: actions/checkout@v4
+            with:
+              ref: config # replace with your source branch name
+              path: source
 
-      - name: Copy schema and configuration file
-        shell: bash
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          ls -al
-          ls -al
+          - name: Checkout target branch
+            uses: actions/checkout@v4
+            with:
+              ref: standaardenregister # replace with your target branch name
+              path: target
+
+          - name: Copy files
+            run: |
+              ls -la
   verify-json-validation:
     # Wait for previous job to make sure the schemas folder and configuration schema are created before running this job
     needs: fetch-configuration-files
