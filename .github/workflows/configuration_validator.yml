@@ -18,7 +18,6 @@ jobs:
           repository: ${{ github.repository }}
           ref: config
           path: source
-
       - name: Checkout target branch
         uses: actions/checkout@v4
         with:
@@ -39,4 +38,4 @@ jobs:
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
           INPUT_SCHEMA: source/schemas/configuration.json
-          INPUT_JSONS: "target/**.json"
+          INPUT_JSONS: "target/ap-or-voc-config.json"
