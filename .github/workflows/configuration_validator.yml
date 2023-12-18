@@ -15,7 +15,7 @@ jobs:
       - name: Checkout source branch
         uses: actions/checkout@v4
         with:
-          repository: ${{ github.repository }}
+          repository: Informatievlaanderen/OSLOthema-template
           ref: config
           path: source
       - name: Checkout target branch
