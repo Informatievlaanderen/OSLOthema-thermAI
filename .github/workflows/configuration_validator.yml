@@ -37,7 +37,7 @@ jobs:
       - name: Copy schema files from source to target
         shell: bash
         run: |
-          mkdir -p target/schemas 
+          mkdir -p target/schemas && cp -r source/schemas/* target/schemas/*
       - name: list folder structure
         shell: bash
         run: |
