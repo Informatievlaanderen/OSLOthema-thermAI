@@ -38,9 +38,11 @@ jobs:
       - name: Create diff
         shell: bash
         run: |
+          # fallback needed because diff returns 1 when there are differences which causes the workflow to fail
           diff -ru source target > diff.txt || true
       - name: Commit and push diff
         run: |
+          cd source
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add diff.txt
