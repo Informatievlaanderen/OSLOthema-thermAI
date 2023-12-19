@@ -38,7 +38,7 @@ jobs:
       - name: Create diff
         shell: bash
         run: |
-          diff -x .git -W200 -y -ru source target | sed -e "s/\(^diff .*\)/\x1b[31m\1\x1b[0m/" > diff.txt
+          diff -x .git -W200 -y -ru source target > diff.txt
       - name: Commit and push diff
         run: |
           git config user.name github-actions
