@@ -34,11 +34,6 @@ jobs:
         shell: bash
         run: |
           ls target
-      - name: Test to see if it recognizes git diff
-        shell: bash
-        run: |
-          git diff
-
       - name: Create diff
         run: |
           git diff --no-index source target
