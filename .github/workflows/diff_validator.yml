@@ -1,0 +1,30 @@
+name: Check diff between template and current state
+on: [push]
+
+jobs:
+  generate-diff:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version:
+          - 18.x
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+        with:
+          repository: Informatievlaanderen/OSLOthema-template
+          ref: standaardenregister
+          path: source
+
+      - name: Clone other repository
+        uses: actions/checkout@v4
+        with:
+          # Dynamic reference to the active repository so that it works immediately when creating a new thema repo
+          repository: ${{ github.repository }}
+          ref: standaardenregister
+          path: target
+
+      - name: Create diff
+        run: |
+          git diff source target > diff.txt
