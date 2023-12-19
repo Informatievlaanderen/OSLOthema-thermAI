@@ -34,9 +34,9 @@ jobs:
         shell: bash
         run: |
           # make file runnable, might not be necessary
-          chmod +x "${GITHUB_WORKSPACE}/.github/scripts/run_generate_configuration_schema.sh"
+          chmod +x "${GITHUB_WORKSPACE}/.github/scripts/run_generate_json_schema.sh"
           # run script
-          "${GITHUB_WORKSPACE}/.github/scripts/run_generate_configuration_schema.sh"
+          "${GITHUB_WORKSPACE}/.github/scripts/run_generate_json_schema.sh"
       - name: Commit and push changes
         run: |
           git config user.name github-actions

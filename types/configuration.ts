@@ -16,10 +16,9 @@ export interface Configuration {
   dateOfRegistration: string;
   dateOfAcknowledgementByWorkingGroup: string;
   dateOfAcknowledgementBySteeringCommittee: string;
-  fileName?: string;
 }
 
-export interface Document {
+interface Document {
   name?: string;
   resourceReference?: string;
 }

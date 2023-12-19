@@ -6,7 +6,7 @@ const path = require("path");
 const config = {
   path: path.join(__dirname, "/types/configuration.ts"),
   tsconfig: path.join(__dirname, "tsconfig.json"),
-  type: "*", // Or <type-name> if you want to generate schema for that one type only
+  type: "Configuration", // Or <type-name> if you want to generate schema for that one type only
 };
 
 const output_path = path.join(__dirname, "/schemas/configuration.json");
