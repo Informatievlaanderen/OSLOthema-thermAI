@@ -38,4 +38,6 @@ jobs:
       - name: Create diff
         shell: bash
         run: |
-          git diff --no-index  --name-only source target
+          diff -x .git -W200 -y -r source target | sed -e "s/\(^diff .*\)/\x1b[31m\1\x1b[0m/"
+
+
