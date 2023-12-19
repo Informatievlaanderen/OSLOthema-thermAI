@@ -41,11 +41,11 @@ jobs:
           # fallback needed because diff returns 1 when there are differences which causes the workflow to fail
           git diff --no-index --name-only source target || true
           # git diff --no-index --name-only source target > source/diff.txt || true
-      - name: Commit and push diff
-        run: |
-          cd source
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add diff.txt
-          git commit -m "Add diff"
-          git push
+      # - name: Commit and push diff
+      #   run: |
+      #     cd source
+      #     git config user.name github-actions
+      #     git config user.email github-actions@github.com
+      #     git add diff.txt
+      #     git commit -m "Add diff"
+      #     git push
