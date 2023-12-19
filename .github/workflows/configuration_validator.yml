@@ -43,7 +43,6 @@ jobs:
         with:
           json_schema: source/schemas/configuration.json
           json_extension: json
-          # base_dir: target
-          files: target/ap-or-voc-config.json
+          base_dir: target
           comment: true
           use_gitignore: false
