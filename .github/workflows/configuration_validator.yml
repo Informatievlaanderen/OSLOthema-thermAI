@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        # Different Node versions. Each node version will trigger the action
+        # Different Node versions possible. Each node version will trigger the action
         node-version:
           - 18.x
     steps:
