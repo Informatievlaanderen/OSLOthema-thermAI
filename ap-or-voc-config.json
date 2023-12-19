@@ -10,10 +10,12 @@
   "descriptionFileName": "",
   "specificationDocuments": [],
   "documentation": [],
-  "charter": {},
+  "charter": {
+    "name": "Hello world"
+  },
   "reports": [],
   "presentations": [],
   "dateOfRegistration": "",
   "dateOfAcknowledgementByWorkingGroup": "",
-  "dateOfAcknowledgementBySteeringCommitte": ""
+  "dateOfAcknowledgementBySteeringCommittee": ""
 }
