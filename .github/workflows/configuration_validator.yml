@@ -15,6 +15,7 @@ jobs:
       - name: Checkout source branch
         uses: actions/checkout@v4
         with:
+          # Hardcoded reference to the thema repo, since this repo contains the boilerplate for all repos
           repository: Informatievlaanderen/OSLOthema-template
           ref: config
           # The source folder contains the configuration files, as defined in the thema-template-repository
