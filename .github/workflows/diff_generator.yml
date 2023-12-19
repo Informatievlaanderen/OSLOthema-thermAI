@@ -23,8 +23,22 @@ jobs:
           # Dynamic reference to the active repository so that it works immediately when creating a new thema repo
           repository: ${{ github.repository }}
           ref: standaardenregister
-          path: target
+          path:
+            target
+            # Extra step to debug the file structure
+      - name: List file structure of source dir
+        shell: bash
+        run: |
+          ls source
+      - name: List file structure of target dir
+        shell: bash
+        run: |
+          ls target
+      - name: Test to see if it recognizes git diff
+        shell: bash
+        run: |
+          git diff
 
       - name: Create diff
         run: |
-          git diff --no-index source target > ./diff.txt 
+          git diff --no-index source target > ./diff.txt
