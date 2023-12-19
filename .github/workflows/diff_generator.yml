@@ -27,4 +27,4 @@ jobs:
 
       - name: Create diff
         run: |
-          diff -ru source target > diff.txt
+          git diff --no-index source target > ./diff.txt 
