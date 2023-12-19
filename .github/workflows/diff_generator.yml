@@ -38,7 +38,7 @@ jobs:
       - name: Create diff
         shell: bash
         run: |
-          diff -W200 -y -ru source target > diff.txt
+          diff -ru source target > diff.txt
       - name: Commit and push diff
         run: |
           git config user.name github-actions
