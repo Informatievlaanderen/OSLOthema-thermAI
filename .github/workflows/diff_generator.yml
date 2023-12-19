@@ -35,5 +35,6 @@ jobs:
         run: |
           ls target
       - name: Create diff
+        shell: bash
         run: |
-          git diff --no-index source target
+          git diff --no-index  --name-only source target
