@@ -41,4 +41,4 @@ jobs:
 
       - name: Create diff
         run: |
-          git diff --no-index source target > ./diff.txt
+          git diff --no-index source target
