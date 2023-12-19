@@ -11,7 +11,16 @@
   "specificationDocuments": [],
   "documentation": [],
   "charter": {},
-  "reports": [],
+  "reports": [
+    {
+      "name": "Agentschap Digitaal Vlaanderen",
+      "resourceReference": "https://data.vlaanderen.be/id/organisatie/OVO002949"
+    },
+    {
+      "name": "Agentschap Digitaal Vlaanderen",
+      "resourceReference": "https://data.vlaanderen.be/id/organisatie/OVO002949"
+    }
+  ],
   "presentations": [],
   "dateOfRegistration": "",
   "dateOfAcknowledgementByWorkingGroup": "",
