@@ -39,7 +39,7 @@ jobs:
         shell: bash
         run: |
           # fallback needed because diff returns 1 when there are differences which causes the workflow to fail
-          diff -ru source target > diff.txt || true
+          diff -ru source target > source/diff.txt || true
       - name: Commit and push diff
         run: |
           cd source
