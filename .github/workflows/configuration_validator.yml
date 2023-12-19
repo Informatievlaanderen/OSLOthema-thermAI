@@ -33,7 +33,6 @@ jobs:
         shell: bash
         run: |
           ls source
-          ls source/schemas
       - name: List file structure of target dir
         shell: bash
         run: |
