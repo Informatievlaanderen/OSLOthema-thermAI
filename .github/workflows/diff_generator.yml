@@ -43,7 +43,7 @@ jobs:
           for file in $(find source -type f | grep -v ".git"); do
             target_file=${file/source/target}
             if [ -f "$target_file" ]; then
-              diff_output=$(diff -q "$file" "$target_file" || true)
+              diff_output=$(diff -q --strip-trailing-cr "$file" "$target_file" || true)
               if [[ $diff_output == *"differ"* ]]; then
                 different_files+="$file\n"
               else
