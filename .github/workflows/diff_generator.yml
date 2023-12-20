@@ -22,7 +22,7 @@ jobs:
         with:
           # Dynamic reference to the active repository so that it works immediately when creating a new thema repo
           # repository: ${{ github.repository }}
-          repository: Informatievlaanderen/OSLOthema-voorwaarden-dienstverlening
+          repository: Informatievlaanderen/OSLOthema-lokaleEconomie
           ref: standaardenregister
           path:
             target
