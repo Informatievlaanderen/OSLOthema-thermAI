@@ -1,6 +1,6 @@
 # OSLOthema - configuration files
 
-This branch should be used to manage the configuration files of the OSLOthema repositories. The configuration files are used to validatate the OSLOthema configuration files in each thema-repository.
+This branch should be used to manage the configuration files of the OSLOthema repositories. The configuration files are used to validatate the OSLOthema configuration files in each thema-repository. These files shouldn't be touched by the editors of OSLO
 
 ## /types
 
