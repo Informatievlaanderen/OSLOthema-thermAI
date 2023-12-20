@@ -39,17 +39,23 @@ jobs:
         shell: bash
         run: |
           identical_files=""
+          different_files=""
           for file in $(find source -type f | grep -v ".git"); do
             target_file=${file/source/target}
             if [ -f "$target_file" ]; then
-              diff_output=$(diff -q "$file" "$target_file" | cat -t || true)
-              if not [[ $diff_output == *"differ"* ]]; then
+              diff_output=$(diff -b "$file" "$target_file" | cat -t || true)
+              if [[ $diff_output == *"differ"* ]]; then
+                different_files+="$file\n"
+              else
                 identical_files+="$file\n"
               fi
             fi
           done
           echo "Identical files:"
           echo -e "$identical_files"
+          echo "---------------------------------------------------"
+          echo "Different files:"
+          echo -e "$different_files"
       # - name: Commit and push diff
       #   run: |
       #     cd source
