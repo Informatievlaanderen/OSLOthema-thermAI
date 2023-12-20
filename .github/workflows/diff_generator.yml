@@ -51,8 +51,11 @@ jobs:
               fi
             fi
           done
-          echo -e "$identical_files"
-          echo -e "$different_files"
+          echo "Identical files:"
+          echo "$identical_files"
+          echo "---------------------------------------------------"
+          echo "Different files:"
+          echo "$different_files"
       # - name: Commit and push diff
       #   run: |
       #     cd source
