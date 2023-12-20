@@ -39,8 +39,21 @@ jobs:
         shell: bash
         run: |
           # fallback needed because diff returns 1 when there are differences which causes the workflow to fail
-          diff -rs source target || true
-          # git diff --no-index --name-only source target > source/diff.txt || true
+          identical_files=""
+          different_files=""
+          for file in $(find source -type f | grep -v ".git"); do
+            target_file=${file/source/target}
+            if [ -f "$target_file" ]; then
+              diff_output=$(diff -q "$file" "$target_file" || true)
+              if [[ $diff_output == *"differ"* ]]; then
+                different_files+="$file\n"
+              else
+                identical_files+="$file\n"
+              fi
+            fi
+          done
+          echo -e "$identical_files" > identical_files.txt
+          echo -e "$different_files" > different_files.txt
       # - name: Commit and push diff
       #   run: |
       #     cd source
