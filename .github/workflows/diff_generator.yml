@@ -21,8 +21,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           # Dynamic reference to the active repository so that it works immediately when creating a new thema repo
-          # repository: ${{ github.repository }}
-          repository: Informatievlaanderen/OSLOthema-voorwaarden-dienstverlening
+          repository: ${{ github.repository }}
           ref: standaardenregister
           path:
             target
@@ -38,7 +37,7 @@ jobs:
       - name: See which files are unchanged between template and repository
         shell: bash
         # add a rule to ignore .git folder
-        run: |    
+        run: |
           identical_files=""
           for file in $(find source -type f | grep -v ".git"); do
             target_file=${file/source/target}
