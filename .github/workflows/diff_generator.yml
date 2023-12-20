@@ -22,7 +22,7 @@ jobs:
         with:
           # Dynamic reference to the active repository so that it works immediately when creating a new thema repo
           # repository: ${{ github.repository }}
-          repository: Informatievlaanderen/OSLOthema-lokaleEconomie
+          repository: Informatievlaanderen/OSLOthema-voorwaarden-dienstverlening
           ref: standaardenregister
           path:
             target
@@ -35,9 +35,10 @@ jobs:
         shell: bash
         run: |
           ls target
-      - name: Create diff
+      - name: See which files are unchanged between template and repository
         shell: bash
-        run: |
+        # add a rule to ignore .git folder
+        run: |    
           identical_files=""
           for file in $(find source -type f | grep -v ".git"); do
             target_file=${file/source/target}
@@ -50,11 +51,3 @@ jobs:
           done
           echo "Identical files:"
           echo -e "$identical_files"
-      # - name: Commit and push diff
-      #   run: |
-      #     cd source
-      #     git config user.name github-actions
-      #     git config user.email github-actions@github.com
-      #     git add diff.txt
-      #     git commit -m "Add diff"
-      #     git push
