@@ -45,7 +45,7 @@ jobs:
             if [ -f "$target_file" ]; then
               diff_output=$(diff -b "$file" "$target_file" | cat -t || true)
               if ! [[ $diff_output == *"differ"* ]]; then
-                identical_files+="${file##*/}"
+                identical_files+="- ${file##*/}\n"
               fi
             fi
           done
