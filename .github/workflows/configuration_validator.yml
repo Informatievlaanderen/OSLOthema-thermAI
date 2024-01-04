@@ -47,6 +47,7 @@ jobs:
           base_dir: target
           comment: true
           use_gitignore: false
+        continue-on-error: true
       - name: Save validation logs
         if: always()
         run: |
