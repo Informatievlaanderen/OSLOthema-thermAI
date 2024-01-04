@@ -51,6 +51,7 @@ jobs:
           done
           echo "Identical files:"
           echo -e "$identical_files"
-          echo "# Overview of the identical files, compared to the template" >> $GITHUB_STEP_SUMMARY
+          echo "# Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## Identical files compared to the template" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
           echo -e "$identical_files" >> $GITHUB_STEP_SUMMARY
