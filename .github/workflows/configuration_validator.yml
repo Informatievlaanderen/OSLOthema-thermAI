@@ -50,10 +50,11 @@ jobs:
       - name: Save validation logs
         if: always()
         run: |
-          mkdir logs
-          docker cp $(docker ps -alq):/app/logs ./logs
+            mkdir logs
+            docker cp $(docker ps -alq):/app/logs ./logs
+  
       - name: Upload logs as artifact
         uses: actions/upload-artifact@v2
         with:
-          name: validation-logs
-          path: ./logs
+            name: validation-logs
+            path: ./logs
