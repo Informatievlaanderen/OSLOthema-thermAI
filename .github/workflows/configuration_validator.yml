@@ -47,7 +47,7 @@ jobs:
           base_dir: target
           comment: true
           use_gitignore: false
-      - name: Save validation logs
+      - name: Log validation result to summary
         run: |
           echo "# Summary" >> $GITHUB_STEP_SUMMARY
           if [ ${{ steps.validate.outputs.success }} == "true" ]; then
