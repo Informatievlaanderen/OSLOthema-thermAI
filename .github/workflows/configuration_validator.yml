@@ -38,6 +38,7 @@ jobs:
         run: |
           ls target
       - name: Validate JSON
+        id: validate
         # https://github.com/marketplace/actions/json-yaml-validate
         uses: GrantBirki/json-yaml-validate@v2.4.0
         with:
@@ -46,3 +47,13 @@ jobs:
           base_dir: target
           comment: true
           use_gitignore: false
+      - name: Save validation logs
+        if: always()
+        run: |
+          mkdir logs
+          docker cp $(docker ps -alq):/app/logs ./logs
+      - name: Upload logs as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: validation-logs
+          path: ./logs
