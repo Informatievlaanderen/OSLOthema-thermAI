@@ -49,4 +49,9 @@ jobs:
           use_gitignore: false
       - name: Save validation logs
         run: |
-          echo "Validation result: ${{ steps.validate.outputs.success }}"
+          echo "# Summary" >> $GITHUB_STEP_SUMMARY
+          if [ ${{ steps.validate.outputs.success }} == "true" ]; then
+            echo "All configuration file(s) in the repository are valid!" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "There are some errors in the configuration file(s). Please check the logs to see which files" >> $GITHUB_STEP_SUMMARY
+          fi
