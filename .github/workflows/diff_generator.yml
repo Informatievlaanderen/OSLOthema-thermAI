@@ -45,7 +45,7 @@ jobs:
             if [ -f "$target_file" ]; then
               diff_output=$(diff -b "$file" "$target_file" | cat -t || true)
               if ! [[ $diff_output == *"differ"* ]]; then
-                identical_files+="$file\n"
+                identical_files+="${file##*/}"
               fi
             fi
           done
@@ -53,5 +53,4 @@ jobs:
           echo -e "$identical_files"
           echo "# Summary" >> $GITHUB_STEP_SUMMARY
           echo "## Identical files compared to the template" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
           echo -e "$identical_files" >> $GITHUB_STEP_SUMMARY
