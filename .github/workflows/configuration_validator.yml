@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           # Dynamic reference to the active repository so that it works immediately when creating a new thema repo
-          repository: ${{ github.repository }}
+          repository: https://github.com/Informatievlaanderen/OSLOthema-lokaleEconomie
           ref: standaardenregister
           # Target is the folder containing the content of thema-repository
           path: target
