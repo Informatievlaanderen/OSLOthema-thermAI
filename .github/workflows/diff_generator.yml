@@ -54,3 +54,7 @@ jobs:
           echo "# Summary" >> $GITHUB_STEP_SUMMARY
           echo "## Identical files compared to the template" >> $GITHUB_STEP_SUMMARY
           echo -e "$identical_files" >> $GITHUB_STEP_SUMMARY
+          if [ -n "$identical_files" ]; then
+            echo "Error: There are identical files between the template and the repository." >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
