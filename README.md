@@ -9,3 +9,5 @@ This directory contains the different typescript configuration files. The config
 ## /schemas
 
 This directory contains the different JSON schema files. These files are generated using the TypeScript files defined in `/types`. The schema files are used to validate the OSLOthema configuration files in each thema-repository.
+
+TEST
