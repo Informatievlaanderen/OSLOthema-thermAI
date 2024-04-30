@@ -14,6 +14,9 @@
         "usage": {
           "type": "string"
         },
+        "status": {
+          "type": "string"
+        },
         "responsibleOrganisation": {
           "type": "object",
           "properties": {
@@ -122,6 +125,7 @@
         "title",
         "category",
         "usage",
+        "status",
         "responsibleOrganisation",
         "publicationDate",
         "descriptionFileName",
