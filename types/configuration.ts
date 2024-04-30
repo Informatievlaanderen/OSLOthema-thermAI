@@ -2,6 +2,7 @@ export interface Configuration {
   title: string;
   category: string;
   usage: string;
+  status: string;
   responsibleOrganisation: {
     name: string;
     uri: string;
