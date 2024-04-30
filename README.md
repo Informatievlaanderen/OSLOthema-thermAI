@@ -48,7 +48,14 @@ Is the usage of the data standard mandatory or recommended? Allowed values are:
 - Verplicht
 - Pas toe of leg uit
 
-### `repsonsibleOrganisation`
+### `status`
+
+Different stages of the data standard lifecycle:
+- standaard-in-ontwikkeling
+- kandidaat-standaard
+- erkende-standaard
+
+### `responsibleOrganisation`
 
 The name of the organisation that is responsible for the data standard.
 
