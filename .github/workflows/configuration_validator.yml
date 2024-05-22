@@ -10,7 +10,7 @@ jobs:
         os: [ubuntu-latest]
         # Different Node versions possible. Each node version will trigger the action
         node-version:
-          - 18.x
+          - 20.x
     steps:
       - name: Checkout source branch
         uses: actions/checkout@v4
