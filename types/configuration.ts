@@ -17,6 +17,9 @@ export interface Configuration {
   dateOfRegistration: string;
   dateOfAcknowledgementByWorkingGroup: string;
   dateOfAcknowledgementBySteeringCommittee: string;
+  datePublicReviewStart: string;
+  datePublicReviewEnd: string;
+  endOfPublicationDate: string;
 }
 
 interface Document {

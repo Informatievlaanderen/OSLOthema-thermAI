@@ -27,10 +27,7 @@
               "type": "string"
             }
           },
-          "required": [
-            "name",
-            "uri"
-          ],
+          "required": ["name", "uri"],
           "additionalProperties": false
         },
         "publicationDate": {
@@ -118,6 +115,15 @@
           "type": "string"
         },
         "dateOfAcknowledgementBySteeringCommittee": {
+          "type": "string"
+        },
+        "datePublicReviewStart": {
+          "type": "string"
+        },
+        "datePublicReviewEnd": {
+          "type": "string"
+        },
+        "endOfPublicationDate": {
           "type": "string"
         }
       },
