@@ -1,0 +1,45 @@
+name: Convert the EAP file to JSON-ld
+
+on:
+  workflow_dispatch:
+    inputs:
+      uml-file:
+        description: "Link to the UML file, for example: https://github.com/Informatievlaanderen/OSLOthema-persoon/raw/master/ICEG-Person.eap"
+        required: true
+        default: https://github.com/Informatievlaanderen/OSLOthema-persoon/raw/master/ICEG-Person.eap
+      diagram-name:
+        description: "Name of the diagram, for example: OSLO-Persoon-Basis"
+        required: true
+        default: "OSLO-Persoon-Basis"
+      specification-type:
+        description: "Type of the specification, for example: Vocabulary or ApplicationProfile"
+        required: true
+        default: "ApplicationProfile"
+      version-id:
+        description: "Version of the specification, for example: test/1"
+        required: true
+        default: "test/1"
+      publication-environment:
+        description: "Publication environment, for example: https://data.vlaanderen.be"
+        required: true
+        default: "https://data.vlaanderen.be"
+
+jobs:
+  convert-eap:
+    # The type of runner that the job will run on
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        # Different Node versions. Each node version will trigger the action
+        node-version:
+          - 20.x
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install ea-converter
+        run: npm install @oslo-flanders/ea-converter
+
+      - name: Run oslo-converter-ea
+        run: npx oslo-converter-ea --umlFile ${{ github.event.inputs.uml-file }} --diagramName ${{ github.event.inputs.diagram-name }} --specificationType ${{ github.event.inputs.specification-type }} --versionId ${{ github.event.inputs.version-id }} --publicationEnvironment ${{ github.event.inputs.publication-environment }}
