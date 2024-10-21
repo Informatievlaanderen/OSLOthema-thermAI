@@ -40,7 +40,7 @@ jobs:
         # add a rule to ignore .git folder
         run: |
           identical_files=""
-          for file in $(find source -type f | grep -v ".git"); do
+          for file in $(find source -type f | grep -v -e ".git" -e "README"); do
             target_file=${file/source/target}
             if [ -f "$target_file" ]; then
               diff_output=$(diff -b "$file" "$target_file" | cat -t || true)
