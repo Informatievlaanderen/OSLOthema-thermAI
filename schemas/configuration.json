@@ -18,17 +18,19 @@
           "type": "string"
         },
         "responsibleOrganisation": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "resourceReference": {
+                "type": "string"
+              }
             },
-            "uri": {
-              "type": "string"
-            }
-          },
-          "required": ["name", "uri"],
-          "additionalProperties": false
+            "additionalProperties": false
+          }
         },
         "publicationDate": {
           "type": "string"
@@ -142,7 +144,10 @@
         "presentations",
         "dateOfRegistration",
         "dateOfAcknowledgementByWorkingGroup",
-        "dateOfAcknowledgementBySteeringCommittee"
+        "dateOfAcknowledgementBySteeringCommittee",
+        "datePublicReviewStart",
+        "datePublicReviewEnd",
+        "endOfPublicationDate"
       ],
       "additionalProperties": false
     }
