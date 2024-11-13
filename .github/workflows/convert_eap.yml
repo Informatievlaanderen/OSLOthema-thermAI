@@ -49,8 +49,15 @@ jobs:
 
       # Run the converter
       - name: Run oslo-converter-ea
-        run: npx oslo-converter-ea --umlFile ${{ steps.read-config.outputs.umlFile }} --diagramName ${{ steps.read-config.outputs.diagramName }} --specificationType ${{ steps.read-config.outputs.specificationType }} --versionId test/1 --publicationEnvironment https://data.vlaanderen.be
-
+        id: run-converter
+        run: |
+          output=$(npx oslo-converter-ea --umlFile ${{ steps.read-config.outputs.umlFile }} --diagramName ${{ steps.read-config.outputs.diagramName }} --specificationType ${{ steps.read-config.outputs.specificationType }} --versionId test/1 --publicationEnvironment https://data.vlaanderen.be)
+          echo "$output"
+          echo "$output" >> "$GITHUB_STEP_SUMMARY"
+          if echo "$output" | grep -i "error"; then
+            echo "Error found in workflow output"
+            exit 1
+          fi
       - name: Check if report.jsonld exists
         run: |
           if [ -f ./report.jsonld ]; then
