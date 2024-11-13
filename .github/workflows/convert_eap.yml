@@ -51,10 +51,10 @@ jobs:
       - name: Run oslo-converter-ea
         id: run-converter
         run: |
-          output=$(npx oslo-converter-ea --umlFile ${{ steps.read-config.outputs.umlFile }} --diagramName ${{ steps.read-config.outputs.diagramName }} --specificationType ${{ steps.read-config.outputs.specificationType }} --versionId test/1 --publicationEnvironment https://data.vlaanderen.be)
-          echo "$output"
-          echo "$output" >> "$GITHUB_STEP_SUMMARY"
-          if echo "$output" | grep -i "error"; then
+          npx oslo-converter-ea --umlFile ${{ steps.read-config.outputs.umlFile }} --diagramName ${{ steps.read-config.outputs.diagramName }} --specificationType ${{ steps.read-config.outputs.specificationType }} --versionId test/1 --publicationEnvironment https://data.vlaanderen.be > output.log 2>&1
+          cat output.log
+          cat output.log >> "$GITHUB_STEP_SUMMARY"
+          if grep -i "error" output.log; then
             echo "Error found in workflow output"
             exit 1
           fi
