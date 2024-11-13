@@ -51,6 +51,15 @@ jobs:
       - name: Run oslo-converter-ea
         run: npx oslo-converter-ea --umlFile ${{ steps.read-config.outputs.umlFile }} --diagramName ${{ steps.read-config.outputs.diagramName }} --specificationType ${{ steps.read-config.outputs.specificationType }} --versionId test/1 --publicationEnvironment https://data.vlaanderen.be
 
+      - name: Check for errors in output
+        run: |
+          if echo "${{ steps.convert.outputs.result }}" | grep -i "error"; then
+            echo "Error found in workflow output"
+            exit 1
+          else
+            echo "No errors found in workflow output"
+          fi
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
