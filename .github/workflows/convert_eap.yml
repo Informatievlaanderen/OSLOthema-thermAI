@@ -51,7 +51,7 @@ jobs:
       - name: Run oslo-converter-ea
         id: run-converter
         run: |
-          npx oslo-converter-ea --umlFile ${{ steps.read-config.outputs.umlFile }} --diagramName ${{ steps.read-config.outputs.diagramName }} --specificationType ${{ steps.read-config.outputs.specificationType }} --versionId test/1 --publicationEnvironment https://data.vlaanderen.be 2>&1 | tee output.log
+          npx oslo-converter-ea --umlFile ${{ steps.read-config.outputs.umlFile }} --diagramName ${{ steps.read-config.outputs.diagramName }} --specificationType ${{ steps.read-config.outputs.specificationType }} --versionId test/1 --publicationEnvironment https://data.vlaanderen.be --debug true 2>&1 | tee output.log
           cat output.log
           cat output.log >> "$GITHUB_STEP_SUMMARY"
           if grep -i "error" output.log; then
