@@ -66,7 +66,7 @@ The name of the organisation(s) that is responsible for the data standard.
 
 The name of the organisation that is responsible for the data standard
 
-#### `uri`
+#### `resourceReference`
 
 The uri of the organisation that is responsible for the data standard.
 
@@ -90,7 +90,7 @@ Links to the application profile(s) or vocabulary. This **must** always be an ar
 "specificationDocuments": [
     {
         "name": "Applicatieprofiel LDES",
-        "uri": "https://data.vlaanderen.be/doc/applicatieprofiel/ldes"
+        "resourceReference": "https://data.vlaanderen.be/doc/applicatieprofiel/ldes"
     }
 ]
 ```
