@@ -60,7 +60,7 @@ Different stages of the data standard lifecycle:
 
 ### `responsibleOrganisation`
 
-The name of the organisation that is responsible for the data standard.
+The name of the organisation(s) that is responsible for the data standard.
 
 #### `name`
 
