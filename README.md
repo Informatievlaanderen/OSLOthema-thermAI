@@ -30,11 +30,12 @@ This is the file that must be used to configure the standard for publication on 
 
 ### `title`
 
-This is the name of the data standard, e.g. *Applicatieprofiel LDES* or *Vocabularium Persoon*.
+This is the name of the data standard, e.g. _Applicatieprofiel LDES_ or _Vocabularium Persoon_.
 
 ### `category`
 
 The category of the data standard. Allowed values are:
+
 - Applicatieprofiel
 - Vocabularium
 - Implementatiemodel
@@ -44,6 +45,7 @@ The category of the data standard. Allowed values are:
 ### `usage`
 
 Is the usage of the data standard mandatory or recommended? Allowed values are:
+
 - Aanbevolen (vrijwillig)
 - Verplicht
 - Pas toe of leg uit
@@ -51,6 +53,7 @@ Is the usage of the data standard mandatory or recommended? Allowed values are:
 ### `status`
 
 Different stages of the data standard lifecycle:
+
 - standaard-in-ontwikkeling
 - kandidaat-standaard
 - erkende-standaard
@@ -82,6 +85,7 @@ The name of the Markdown file (stored in the `descriptions` folder) that contain
 Links to the application profile(s) or vocabulary. This **must** always be an array of objects with the properties `name` and `uri`.
 
 #### Example
+
 ```json
 "specificationDocuments": [
     {
@@ -98,6 +102,7 @@ Additional documentation to be displayed on the detail page of the data standard
 This **must** always be an array of objects containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `documentation` folder. In that case you can write the name of the file.
 
 #### Example
+
 ```json
 "documentation": [
     {
@@ -116,6 +121,7 @@ This **must** always be an array of objects containing the properties `name` and
 The OSLO charter that will be displayed on the detail page of the data standard. This **must** always be an object containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `charter` folder. In that case you can write the name of the file.
 
 #### Example
+
 ```json
 "charter": {
     "name": "OSLO Charter",
@@ -130,6 +136,7 @@ Reports made of the workshop to be displayed on the detail page of the data stan
 This **must** always be an array of objects containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `reports` folder. In that case you can write the name of the file.
 
 #### Example
+
 ```json
 "reports": [
     {
@@ -146,6 +153,7 @@ Presentations that were used during the workshop and must be displayed on the de
 This **must** always be an array of objects containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `presentations` folder. In that case you can write the name of the file
 
 #### Example
+
 ```json
 "presentations": [
     {
@@ -170,3 +178,15 @@ The date on which the data standard was accepted as an acknowledged standard by 
 ### `dateRecognitionSteeringCommittee`
 
 The date on which the data standard was accepted as an acknowledged standard by the steering committee 'Flemish Information and ICT policy'.
+
+### `datePublicReviewStart`
+
+The date on which the public review of the data standard started.
+
+### `datePublicReviewEnd`
+
+The date on which the public review of the data standard ended.
+
+### `endOfPublicationDate`
+
+The date on which the data standard is no longer valid and shouldn't be used anymore.
