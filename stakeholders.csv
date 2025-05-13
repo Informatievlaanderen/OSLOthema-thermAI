@@ -1,5 +1,14 @@
 Voornaam;Naam;Affiliatie;E-mail;Website;Rol;
-Ward;Steeman;West-Vlaamse Intercommunale;;https://www.wvi.be/;A;
-Ide;Vandenbroucke;Stad Brugge;;https://www.brugge.be/;A;
-EditorVoornaam;EditorNaam;EditorAffiliatie;editorvoornaam.editornaam@editordomein;https://editorwebsiteurl;E;
-MedewerkerVoornaam;MedewerkerNaam;MedewerkerAffiliatie;medewerkervoornaam.medewerkernaam@medewerkerdomein;https://medewerkerwebsiteurl;C;
+Ward;Steeman;West-Vlaamse Intercommunale;;https://www.wvi.be/;A
+Ide;Vandenbroucke;Stad Brugge;;https://www.brugge.be/;A
+Geert;Thijs;Digitaal Vlaanderen;;https://www.vlaanderen.be/digitaal-vlaanderen;E
+Yaron;Dassonneville;Digitaal Vlaanderen;;https://www.vlaanderen.be/digitaal-vlaanderen;E
+Arne;Daniels;Digitaal Vlaanderen;;https://www.vlaanderen.be/digitaal-vlaanderen;E
+Hugues;Delsaut;Digitaal Vlaanderen;;https://www.vlaanderen.be/digitaal-vlaanderen;E
+Laurens;Vercauteren;Digitaal Vlaanderen;;https://www.vlaanderen.be/digitaal-vlaanderen;E
+Eveline;Vlassenroot;Digitaal Vlaanderen;;https://www.vlaanderen.be/digitaal-vlaanderen;E
+Liesbeth;Van der Haegen;Digitaal Vlaanderen;;https://www.vlaanderen.be/digitaal-vlaanderen;E
+Vincent;Malisse;Geographic Information Management NV;;https://www.gim.be/en;C
+Veronique;De Laet;Geographic Information Management NV;;https://www.gim.be/en;C
+Arvid;Vandenberghe;West-Vlaamse Intercommunale;https://www.wvi.be/;;C
+Anouar;Annati;VLOCA;https://www.vlaanderen.be/lokaal-bestuur/digitale-transformatie/vloca;;C
