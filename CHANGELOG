@@ -1,3 +1,6 @@
 YYYY-MM--DD
   - Mijn aanpassing1
   - Mijn aanpassing2
+
+2025-05-14
+- Made connector geassocieerdObject a self-relation instead of a self-relation with an association class
