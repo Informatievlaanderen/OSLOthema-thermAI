@@ -1,6 +1,6 @@
 {
-  "title": "",
-  "category": "",
+  "title": "Applicatieprofiel Thermografische Gebouwanalyse",
+  "category": "applicatieprofiel",
   "usage": "",
   "status": "",
   "responsibleOrganisation": [
@@ -10,16 +10,21 @@
     }
   ],
   "publicationDate": "",
-  "descriptionFileName": "",
-  "specificationDocuments": [],
+  "descriptionFileName": "thermai-description.md",
+  "specificationDocuments": [
+    {
+      "name": "Thermografische Gebouwanalyse Applicatieprofiel",
+      "resourceReference": "https://data.vlaanderen.be/doc/applicatieprofiel/thermAI"
+    }
+  ],
   "documentation": [],
   "charter": {},
   "reports": [],
   "presentations": [],
-  "dateOfRegistration": "",
+  "dateOfRegistration": "2024-12-1",
   "dateOfAcknowledgementByWorkingGroup": "",
   "dateOfAcknowledgementBySteeringCommittee": "",
-  "datePublicReviewStart": "",
-  "datePublicReviewEnd": "",
+  "datePublicReviewStart": "2025-05-22",
+  "datePublicReviewEnd": "2025-09-11",
   "endOfPublicationDate": ""
 }
