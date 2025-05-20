@@ -17,7 +17,12 @@
       "resourceReference": "https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse"
     }
   ],
-  "documentation": [],
+  "documentation": [
+   {
+      "name": "Vocabularium Thermografische Gebouwanalyse",
+      "resourceReference": "https://data.vlaanderen.be/doc/vocabularium/thermografische-gebouwanalyse"
+    }
+  ],
   "charter":[ 
   {
     "name": "Charter Thermografische Beeldanalyse",
