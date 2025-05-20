@@ -1,8 +1,8 @@
 {
   "title": "Vocabularium Thermografische Gebouwanalyse",
-  "category": "vocabularium",
-  "usage": "",
-  "status": "",
+  "category": "Vocabularium",
+  "usage": "Aanbevolen (vrijwillig)",
+  "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
   "responsibleOrganisation": [
     {
       "name": "Agentschap Digitaal Vlaanderen",
@@ -14,7 +14,7 @@
   "specificationDocuments": [
     {
       "name": "Thermografische Gebouwanalyse Vocabularium",
-      "resourceReference": "https://data.vlaanderen.be/ns/thermAI"
+      "resourceReference": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyse"
     }
   ],
   "documentation": [],
