@@ -1,11 +1,11 @@
 Voornaam;Naam;Affiliatie;E-mail;Website;Rol
-Ward;Steeman;West-Vlaamse Intercommunale;;https://www.wvi.be/;A
-Ide;Vandenbroucke;Stad Brugge;;https://www.brugge.be/;A
-Geert;Thijs;Digitaal Vlaanderen;geert.thijs@vlaanderen.be;https://www.vlaanderen.be/digitaal-vlaanderen;E
-Yaron;Dassonneville;Digitaal Vlaanderen;yaron.dassonneville@vlaanderen.be;https://www.vlaanderen.be/digitaal-vlaanderen;E
-Arne;Daniels;Digitaal Vlaanderen;arne.daniels@vlaanderen.be;https://www.vlaanderen.be/digitaal-vlaanderen;E
-Hugues;Delsaut;Digitaal Vlaanderen;;https://www.vlaanderen.be/digitaal-vlaanderen;E
+Ward;Steeman;West-Vlaamse Intercommunale;;https://data.vlaanderen.be/doc/organisatie/OVO003577;A
+Ide;Vandenbroucke;Stad Brugge;;https://data.vlaanderen.be/doc/organisatie/OVO002037;A
+Geert;Thijs;Digitaal Vlaanderen;geert.thijs@vlaanderen.be;https://data.vlaanderen.be/doc/organisatie/OVO002954;E
+Yaron;Dassonneville;Digitaal Vlaanderen;yaron.dassonneville@vlaanderen.be;https://data.vlaanderen.be/doc/organisatie/OVO002954;E
+Arne;Daniels;Digitaal Vlaanderen;arne.daniels@vlaanderen.be;https://data.vlaanderen.be/doc/organisatie/OVO002954;E
+Hugues;Delsaut;Digitaal Vlaanderen;;https://data.vlaanderen.be/doc/organisatie/OVO002954;E
 Vincent;Malisse;Geographic Information Management NV;;https://www.gim.be/en;C
 Veronique;De Laet;Geographic Information Management NV;;https://www.gim.be/en;C
-Arvid;Vandenberghe;West-Vlaamse Intercommunale;;https://www.wvi.be/;C
-Anouar;Annati;VLOCA;;https://www.vlaanderen.be/lokaal-bestuur/digitale-transformatie/vloca;C
+Arvid;Vandenberghe;West-Vlaamse Intercommunale;;https://data.vlaanderen.be/doc/organisatie/OVO003577;C
+Anouar;Annati;Agentschap Binnenlands Bestuur;;https://data.vlaanderen.be/doc/organisatie/OVO001835;C
