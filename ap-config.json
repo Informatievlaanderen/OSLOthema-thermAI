@@ -13,8 +13,8 @@
   "descriptionFileName": "thermai-description.md",
   "specificationDocuments": [
     {
-      "name": "Thermografische Gebouwanalyse Applicatieprofiel",
-      "resourceReference": "https://data.vlaanderen.be/doc/applicatieprofiel/thermAI"
+      "name": "Applicatieprofiel Thermografische Gebouwanalyse",
+      "resourceReference": "https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse"
     }
   ],
   "documentation": [],
