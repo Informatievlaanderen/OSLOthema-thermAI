@@ -24,10 +24,11 @@
     }
   ],
   "charter":[ 
-  {
+   {
     "name": "Charter Thermografische Beeldanalyse",
     "resourceReference": "https://github.com/Informatievlaanderen/OSLOthema-thermAI/blob/standaardenregister/charter/Charter_OSLO_thermAI.docx.pdf",
-  },
+   }
+  ],
   "reports": [
      {
       "name": "Verslag business werkgroep - 18-02-2025",
