@@ -1,8 +1,8 @@
 {
   "title": "Applicatieprofiel Thermografische Gebouwanalyse",
-  "category": "applicatieprofiel",
-  "usage": "",
-  "status": "",
+  "category": "Applicatieprofiel",
+  "usage": "Aanbevolen (vrijwillig)",
+  "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
   "responsibleOrganisation": [
     {
       "name": "Agentschap Digitaal Vlaanderen",
