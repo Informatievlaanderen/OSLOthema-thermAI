@@ -9,12 +9,12 @@
       "resourceReference": "https://data.vlaanderen.be/id/organisatie/OVO002949"
     }
   ],
-  "publicationDate": "",
+  "publicationDate": "2025-05-22",
   "descriptionFileName": "thermai-description.md",
   "specificationDocuments": [
     {
-      "name": "Thermografische Gebouwanalyse Applicatieprofiel",
-      "resourceReference": "https://data.vlaanderen.be/doc/applicatieprofiel/thermAI"
+      "name": "Thermografische Gebouwanalyse Vocabularium",
+      "resourceReference": "https://data.vlaanderen.be/ns/thermAI"
     }
   ],
   "documentation": [],
