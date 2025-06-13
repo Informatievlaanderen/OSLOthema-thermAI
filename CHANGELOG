@@ -2,5 +2,15 @@ YYYY-MM--DD
   - Mijn aanpassing1
   - Mijn aanpassing2
 
+2025-06-13
+- add URIs for GNSS Ontvanger, Camera, Interpretatie, and DomeinObject
+
+2025-06-12
+- Fix alignment of diagram
+- Separate enumerations for toolchain
+- Remove double-associated SSN/SOSA classes
+- Replace Geometrietype with locn:Geometrie
+- Fix URIs
+
 2025-05-14
 - Made connector geassocieerdObject a self-relation instead of a self-relation with an association class
