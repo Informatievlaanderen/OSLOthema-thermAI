@@ -1,4 +1,4 @@
-# OSLO Thermografische Gebouwanalyse
+# Thermografische Gebouwanalyse
 
 ## Inleiding
 
