@@ -20,7 +20,7 @@ Dankzij deze semantische standaard wordt de uitwisseling tussen o.a. gemeentelij
 
 ## Verslagen en presentaties
 
-De verslagen en presentaties van dit traject kan je terugvinden op het [Standaardenregister](https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/thermografische-gebouwanalyse).
+De verslagen en presentaties van dit traject kan je terugvinden op het [Standaardenregister](https://data.vlaanderen.be/standaarden/applicatieprofiel-thermografische-gebouwanalyse).
 
 ## In deze repository
 
