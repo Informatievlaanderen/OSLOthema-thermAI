@@ -1,4 +1,4 @@
-# OSLO Bodem en Ondergrond
+# OSLO Thermografische Gebouwanalyse
 
 ## Inleiding
 
