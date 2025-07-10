@@ -1,0 +1,50 @@
+{
+    "@context": [
+        {
+            "ifc": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#",
+            "SpatialElement.relContainedInSpatialStructure": {
+                "@reverse": "ifc:relatingStructure__IfcRelContainedInSpatialStructure"
+            }
+        }
+    ],
+    "@graph": [
+        {
+            "@id": "_:OBS003",
+            "@type": "Observatie",
+            "Observatie.geobserveerdKenmerk": "https://example.com/kenmerktype/gebouwelement",
+            "Observatie.geobserveerdObject": "_:ITM003",
+            "Observatie.resultaat": "_:GEB001",
+            "Observatie.gebruikteProcedure": {
+                "@type": "Observatieprocedure",
+                "Observatieprocedure.type": "https://example.com/concept/observatieproceduretype/objectherkenning"
+            },
+            "Observatie.uitgevoerdMet": {
+                "@type": "MachineLearningModel",
+                "MachineLearningModel.type": "https://example.com/concept/sensortype/convolutional_neural_network",
+                "MachineLearningModel.getraindOp": "_:OV001"
+            }
+        },
+        {
+            "@id": "_:GEB001",
+            "@type": "BIM_Gebouw",
+            "SpatialElement.relContainedInSpatialStructure": {
+                "@type": "ifc:RelContainedInSpatialStructure",
+                "ifc:relatedElements_IfcRelContainedInSpatialStructure": [
+                    "_:VEN001",
+                    ""
+                ]
+            }
+        },
+        {
+            "@id": "_:VEN001",
+            "@type": "ifc:IfcWindow"
+        },
+        {
+            "@id": "_:OV001",
+            "@type": [
+                "Dataset",
+                "Observatieverzameling"
+            ]
+        }
+    ]
+}
