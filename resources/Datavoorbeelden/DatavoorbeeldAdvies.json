@@ -1,10 +1,6 @@
 {
     "@context": [
-        "",
-        {
-            "xsd": "http://www.w3.org/2001/XMLSchema#",
-            "qudt": "https://qudt.org/schema/qudt/"
-        }
+        ""
     ],
     "@graph": [
         {
@@ -19,7 +15,8 @@
         },
         {
             "@id": "_:OBS005",
-            "@type": "Classificatie",
+            "@type": "Observatie",
+            "Observatie.type":"https://example.com/concept/observatietype/classificatie",
             "Observatie.geobserveerdKenmerk": "https://example.com/concept/kenmerktype/warmteverliesklasse",
             "Observatie.geobserveerdObject": "_:VEN001",
             "Classificatie.resultaat": "https://example.com/concept/warmteverliesklasse/hoog",
@@ -33,18 +30,16 @@
         },
         {
             "@id": "_:OBS004",
-            "@type": "Meting",
+            "@type": "Observatie",
+                        "Observatie.type":"https://example.com/concept/observatietype/meting",
             "Observatie.geobserveerdKenmerk": "https://example.com/concept/kenmerktype/warmteverlies",
             "Observatie.geobserveerdObject": "_:VEN001",
             "Meting.resultaat": {
                 "@type": "KwantitatieveWaarde",
-                "KwantitatieveWaarde.waarde": {
-                    "@value": "3.75",
-                    "@type": "xsd:float"
-                },
+                "KwantitatieveWaarde.waarde": 3.75,
                 "KwantitatieveWaarde.eenheid": {
                     "@id": "http://qudt.org/vocab/unit/DEG_C",
-                    "@type": "qudt:Unit"
+                    "@type": "Eenheid"
                 }
             },
             "Observatie.observatieprocedure": {
@@ -61,15 +56,13 @@
             "Input.type": "https://example.com/concept/inputtype/warmteverlies_drempelwaarde",
             "Input.referentie": {
                 "@type": "KwantitatieveWaarde",
-                "KwantitatieveWaarde.waarde": {
-                    "@value": "3.5",
-                    "@type": "xsd:float"
-                },
+                "KwantitatieveWaarde.waarde": 3.5,
                 "KwantitatieveWaarde.eenheid": {
                     "@id": "http://qudt.org/vocab/unit/DEG_C",
-                    "@type": "qudt:Unit"
+                    "@type": "Eenheid"
                 }
             }
         }
     ]
 }
+
