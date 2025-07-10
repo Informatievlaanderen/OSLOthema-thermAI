@@ -1,0 +1,64 @@
+{
+    "@context": [
+        {
+            "LRMoo": "http://iflastandards.info/ns/lrm/lrmoo/",
+            "weg": "https://data.vlaanderen.be/ns/weg#"
+        }
+    ],
+    "@graph": [
+        {
+            "@id": "_:OBS001",
+            "@type": "Observatie",
+            "Observatie.geobserveerdKenmerk": "https://data.vlaanderen.be/kenmerktype/temperatuurverschil",
+            "Observatie.geobserveerdObject": {
+                "@type": [
+                    "Domeinobject",
+                    "weg:Wegsegment"
+                ]
+            },
+            "Observatie.resultaat": "_:ITM001",
+            "Observatie.uitgevoerdMetSensor": "_:OPS001"
+        },
+        {
+            "@id": "_:ITM001",
+            "@type": [
+                "Video",
+                "LRMooF5_Item"
+            ],
+            "Entiteit.identificator": {
+                "@type": "Identificator",
+                "Identificator.identificator": {
+                    "@value": "video123.jpg",
+                    "@type": "https://example.com/identificatortype/bestandsnaam"
+                }
+            },
+            "LRMoo:R7_exemplifies": ":_MAN001"
+        },
+        {
+            "@id": "_MAN001",
+            "@type": "LRMoo:F3_Manifestation",
+            "Entiteit.type": {
+                "@id": "https://example.com/entiteittype/full_motion_video",
+                "@type": "EntiteitType"
+            },
+            "LRMoo:R69_has_physical_form": "https://example.com/bestand/mp4"
+        },
+        {
+            "@id": "_:OPS001",
+            "@type": "Opstelling",
+            "Platform.hostVan": [
+                "_:CAM001",
+                "_:GPS001"
+            ]
+        },
+        {
+            "@id": "_:CAM001",
+            "@type": "Camera",
+            "Systeem.type": "https://example.com/systeemtype/thermographic_measurement_camera"
+        },
+        {
+            "@id": "_:GPS001",
+            "@type": "GPS"
+        }
+    ]
+}
