@@ -1,4 +1,4 @@
-{
+
     "@context": [
         {
             "LRMoo": "http://iflastandards.info/ns/lrm/lrmoo/",
@@ -11,10 +11,7 @@
             "@type": "Observatie",
             "Observatie.geobserveerdKenmerk": "https://data.vlaanderen.be/kenmerktype/temperatuurverschil",
             "Observatie.geobserveerdObject": {
-                "@type": [
-                    "Domeinobject",
-                    "weg:Wegsegment"
-                ]
+                "@type": "weg:Wegsegment"
             },
             "Observatie.resultaat": "_:ITM001",
             "Observatie.uitgevoerdMetSensor": "_:OPS001"
