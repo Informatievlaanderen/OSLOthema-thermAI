@@ -1,0 +1,75 @@
+{
+    "@context": [
+        "",
+        {
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "qudt": "https://qudt.org/schema/qudt/"
+        }
+    ],
+    "@graph": [
+        {
+            "@id": "_:OBV001",
+            "@type": "Observatieverzameling",
+            "Observatieverzameling.geobserveerdObject": "GEB001",
+            "Observatie.geobserveerdKenmerk": "https://example.com/concept/kenmerktype/warmteverliesklasse",
+            "Observatieverzameling.heeftLid": [
+                "_:OBS005",
+                ""
+            ]
+        },
+        {
+            "@id": "_:OBS005",
+            "@type": "Classificatie",
+            "Observatie.geobserveerdKenmerk": "https://example.com/concept/kenmerktype/warmteverliesklasse",
+            "Observatie.geobserveerdObject": "_:VEN001",
+            "Classificatie.resultaat": "https://example.com/concept/warmteverliesklasse/hoog",
+            "Observatie.observatieprocedure": {
+                "@type": "Observatieprocedure",
+                "Observatieprocedure.input": [
+                    "_:OBS004",
+                    "_:INP001"
+                ]
+            }
+        },
+        {
+            "@id": "_:OBS004",
+            "@type": "Meting",
+            "Observatie.geobserveerdKenmerk": "https://example.com/concept/kenmerktype/warmteverlies",
+            "Observatie.geobserveerdObject": "_:VEN001",
+            "Meting.resultaat": {
+                "@type": "KwantitatieveWaarde",
+                "KwantitatieveWaarde.waarde": {
+                    "@value": "3.75",
+                    "@type": "xsd:float"
+                },
+                "KwantitatieveWaarde.eenheid": {
+                    "@id": "http://qudt.org/vocab/unit/DEG_C",
+                    "@type": "qudt:Unit"
+                }
+            },
+            "Observatie.observatieprocedure": {
+                "@type": "Observatieprocedure",
+                "Observatieprocedure.input": [
+                    "_:OBS003",
+                    "_:ITM003"
+                ]
+            }
+        },
+        {
+            "@id": "_:INP001",
+            "@type": "Input",
+            "Input.type": "https://example.com/concept/inputtype/warmteverlies_drempelwaarde",
+            "Input.referentie": {
+                "@type": "KwantitatieveWaarde",
+                "KwantitatieveWaarde.waarde": {
+                    "@value": "3.5",
+                    "@type": "xsd:float"
+                },
+                "KwantitatieveWaarde.eenheid": {
+                    "@id": "http://qudt.org/vocab/unit/DEG_C",
+                    "@type": "qudt:Unit"
+                }
+            }
+        }
+    ]
+}
