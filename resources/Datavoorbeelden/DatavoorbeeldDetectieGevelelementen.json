@@ -1,5 +1,6 @@
 {
     "@context": [
+        "",
         {
             "ifc": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#",
             "SpatialElement.relContainedInSpatialStructure": {
