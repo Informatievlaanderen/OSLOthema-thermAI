@@ -1,0 +1,72 @@
+{
+    "@context": [
+        "https://data.vlaanderen.be/context/adresregister.jsonld",
+        {
+            "LRMoo": "http://iflastandards.info/ns/lrm/lrmoo/",
+            "geosparql": "http://www.opengis.net/ont/geosparql#"
+        }
+    ],
+    "@graph": [
+        {
+            "@id": "_:OBS002",
+            "@type": "Observatie",
+            "Observatie.geobserveerdKenmerk": "https://example.com/kenmerktype/thermogram_op_gegeven_adres",
+            "Observatie.geobserveerdObject": "_:ITM002",
+            "Observatie.resultaat": "_:ITM003",
+            "Observatie.gebruikteProcedure": {
+                "@type": "Observatieprocedure",
+                "Observatieprocedure.type": "https://example.com/observatieproceduretype/ruimtelijke_overlay",
+                "Observatieprocedure.input": "https://data.vlaanderen.be/id/adres/3706808"
+            },
+            "Observatie.uitgevoerdMetSensor": {
+                "@type": "Sensor",
+                "Systeem.type": "https://example.com/systeemtype/gis"
+            }
+        },
+        {
+            "@id": "_:ITM003",
+            "@type": [
+                "Foto",
+                "LRMooF5_Item"
+            ],
+            "Entiteit.identificator": {
+                "@type": "Identificator",
+                "Identificator.identificator": {
+                    "@value": "thermogram456.jpg",
+                    "@type": "https://example.com/identificatortype/bestandsnaam"
+                }
+            },
+            "LRMoo:R7_exemplifies": ":_MAN003"
+        },
+        {
+            "@id": "_MAN003",
+            "@type": "LRMoo:F3_Manifestation",
+            "Entiteit.type": {
+                "@id": "https://example.com/entiteittype/thermogram",
+                "@type": "EntiteitType"
+            },
+            "LRMoo:R69_has_physical_form": "https://example.com/bestand/jpg"
+        },
+        {
+            "@id": "https://data.vlaanderen.be/id/adres/3706808",
+            "@type": "Adres",
+            "Adres.straatnaam": {
+                "@id": "https://api.basisregisters.vlaanderen.be/v2/straatnamen/70746",
+                "@type": "Straatnaam",
+                "Straatnaam.straatnaam": {
+                    "@value": "Koningin Maria Hendrikaplein",
+                    "@language": "nl"
+                }
+            },
+            "Adres.huisnummer": "70",
+            "Adres.adrespositie": {
+                "@type": "Punt",
+                "Geometrie.gml": {
+                    "@value": "<gml:Point srsName=\"https:\\//www.opengis.net/def/crs/EPSG/0/31370\" xmlns:gml=\"http:\\//www.opengis.net/gml/3.2\"><gml:pos>103664.60 192046.67</gml:pos></gml:Point>",
+                    "@type": "geosparql:gmlliteral"
+                }
+            }
+        }
+    ]
+}
+
