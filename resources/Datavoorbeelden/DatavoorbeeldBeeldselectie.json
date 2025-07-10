@@ -1,9 +1,13 @@
 {
     "@context": [
+        "",
         "https://data.vlaanderen.be/context/adresregister.jsonld",
         {
             "LRMoo": "http://iflastandards.info/ns/lrm/lrmoo/",
-            "geosparql": "http://www.opengis.net/ont/geosparql#"
+            "geosparql": "http://www.opengis.net/ont/geosparql#",
+            "Entiteit.identificator": "http://www.w3.org/ns/adms#identifier",
+            "Entiteit.type": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+            "EntiteitType": "http://www.w3.org/2004/02/skos/core#Concept"
         }
     ],
     "@graph": [
@@ -50,7 +54,7 @@
         {
             "@id": "https://data.vlaanderen.be/id/adres/3706808",
             "@type": "Adres",
-            "Adres.straatnaam": {
+            "straatnaam": {
                 "@id": "https://api.basisregisters.vlaanderen.be/v2/straatnamen/70746",
                 "@type": "Straatnaam",
                 "Straatnaam.straatnaam": {
@@ -59,8 +63,8 @@
                 }
             },
             "Adres.huisnummer": "70",
-            "Adres.adrespositie": {
-                "@type": "Punt",
+            "positie": {
+                "@type": "Geometrie",
                 "Geometrie.gml": {
                     "@value": "<gml:Point srsName=\"https:\\//www.opengis.net/def/crs/EPSG/0/31370\" xmlns:gml=\"http:\\//www.opengis.net/gml/3.2\"><gml:pos>103664.60 192046.67</gml:pos></gml:Point>",
                     "@type": "geosparql:gmlliteral"
