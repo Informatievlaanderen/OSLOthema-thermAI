@@ -1,8 +1,12 @@
 {
     "@context": [
+        "",
         {
             "LRMoo": "http://iflastandards.info/ns/lrm/lrmoo/",
-            "weg": "https://data.vlaanderen.be/ns/weg#"
+            "weg": "https://data.vlaanderen.be/ns/weg#",
+            "Entiteit.identificator": "http://www.w3.org/ns/adms#identifier",
+            "Entiteit.type": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+            "EntiteitType": "http://www.w3.org/2004/02/skos/core#Concept"
         }
     ],
     "@graph": [
@@ -20,7 +24,7 @@
             "@id": "_:ITM001",
             "@type": [
                 "Video",
-                "LRMooF5_Item"
+                "LRMoo:F5_Item"
             ],
             "Entiteit.identificator": {
                 "@type": "Identificator",
@@ -55,7 +59,7 @@
         },
         {
             "@id": "_:GPS001",
-            "@type": "GPS"
+            "@type": "GNSS Ontvanger"
         }
     ]
 }
