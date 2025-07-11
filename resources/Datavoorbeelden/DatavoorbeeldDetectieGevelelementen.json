@@ -13,7 +13,7 @@
             "@id": "_:OBS003",
             "@type": "Observatie",
             "Observatie.geobserveerdKenmerk": "https://example.com/kenmerktype/gebouwelement",
-            "Observatie.geobserveerdObject": "_:ITM003",
+            "Observatie.geobserveerdObject": "_:MAN003",
             "Observatie.resultaat": "_:GEB001",
             "Observatie.gebruikteProcedure": {
                 "@type": "Observatieprocedure",
@@ -41,7 +41,7 @@
             "@type": "ifc:IfcWindow"
         },
         {
-            "@id": "_:OV001",
+            "@id": "_:OVB001",
             "@type": [
                 "Dataset",
                 "Observatieverzameling"
