@@ -15,8 +15,8 @@
             "@id": "_:OBS002",
             "@type": "Observatie",
             "Observatie.geobserveerdKenmerk": "https://example.com/kenmerktype/thermogram_op_gegeven_adres",
-            "Observatie.geobserveerdObject": "_:ITM002",
-            "Observatie.resultaat": "_:ITM003",
+            "Observatie.geobserveerdObject": "_:MAN002",
+            "Observatie.resultaat": "_:MAN003",
             "Observatie.gebruikteProcedure": {
                 "@type": "Observatieprocedure",
                 "Observatieprocedure.type": "https://example.com/observatieproceduretype/ruimtelijke_overlay",
@@ -26,6 +26,16 @@
                 "@type": "Sensor",
                 "Systeem.type": "https://example.com/systeemtype/gis"
             }
+        },
+        {
+            "@id": "_MAN003",
+            "@type": "LRMoo:F3_Manifestation",
+            "Entiteit.type": {
+                "@id": "https://example.com/entiteittype/thermogram",
+                "@type": "EntiteitType"
+            },
+            "LRMoo:R69_has_physical_form": "https://example.com/bestand/jpg",
+            "LRMoo:R7_exemplified_by": ":_ITM003"
         },
         {
             "@id": "_:ITM003",
@@ -41,15 +51,6 @@
                 }
             },
             "LRMoo:R7_exemplifies": ":_MAN003"
-        },
-        {
-            "@id": "_MAN003",
-            "@type": "LRMoo:F3_Manifestation",
-            "Entiteit.type": {
-                "@id": "https://example.com/entiteittype/thermogram",
-                "@type": "EntiteitType"
-            },
-            "LRMoo:R69_has_physical_form": "https://example.com/bestand/jpg"
         },
         {
             "@id": "https://data.vlaanderen.be/id/adres/3706808",
@@ -73,4 +74,3 @@
         }
     ]
 }
-
