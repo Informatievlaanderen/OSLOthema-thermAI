@@ -1,10 +1,9 @@
 {
-    "@context": [
-        ""
-    ],
+    "@context": [],
     "@graph": [
+        "",
         {
-            "@id": "_:OBV001",
+            "@id": "_:OBV002",
             "@type": "Observatieverzameling",
             "Observatieverzameling.geobserveerdObject": "GEB001",
             "Observatie.geobserveerdKenmerk": "https://example.com/concept/kenmerktype/warmteverliesklasse",
@@ -16,7 +15,7 @@
         {
             "@id": "_:OBS005",
             "@type": "Observatie",
-            "Observatie.type":"https://example.com/concept/observatietype/classificatie",
+            "Observatie.type": "https://example.com/concept/observatietype/classificatie",
             "Observatie.geobserveerdKenmerk": "https://example.com/concept/kenmerktype/warmteverliesklasse",
             "Observatie.geobserveerdObject": "_:VEN001",
             "Classificatie.resultaat": "https://example.com/concept/warmteverliesklasse/hoog",
@@ -31,7 +30,7 @@
         {
             "@id": "_:OBS004",
             "@type": "Observatie",
-                        "Observatie.type":"https://example.com/concept/observatietype/meting",
+            "Observatie.type": "https://example.com/concept/observatietype/meting",
             "Observatie.geobserveerdKenmerk": "https://example.com/concept/kenmerktype/warmteverlies",
             "Observatie.geobserveerdObject": "_:VEN001",
             "Meting.resultaat": {
@@ -44,9 +43,8 @@
             },
             "Observatie.observatieprocedure": {
                 "@type": "Observatieprocedure",
-                "Observatieprocedure.input": [
-                    "_:OBS003",
-                    "_:ITM003"
+                "Observatieprocedure.input": [ 
+                    "_:MAN003"
                 ]
             }
         },
@@ -65,4 +63,3 @@
         }
     ]
 }
-
