@@ -17,8 +17,18 @@
             "Observatie.geobserveerdObject": {
                 "@type": "weg:Wegsegment"
             },
-            "Observatie.resultaat": "_:ITM001",
+            "Observatie.resultaat": "_:MAN001",
             "Observatie.uitgevoerdMetSensor": "_:OPS001"
+        },
+        {
+            "@id": "_MAN001",
+            "@type": "LRMoo:F3_Manifestation",
+            "Entiteit.type": {
+                "@id": "https://example.com/entiteittype/full_motion_video",
+                "@type": "EntiteitType"
+            },
+            "LRMoo:R69_has_physical_form": "https://example.com/bestand/mp4",
+            "LRMoo:R7_exemplified_by": ":_ITM001"
         },
         {
             "@id": "_:ITM001",
@@ -34,15 +44,6 @@
                 }
             },
             "LRMoo:R7_exemplifies": ":_MAN001"
-        },
-        {
-            "@id": "_MAN001",
-            "@type": "LRMoo:F3_Manifestation",
-            "Entiteit.type": {
-                "@id": "https://example.com/entiteittype/full_motion_video",
-                "@type": "EntiteitType"
-            },
-            "LRMoo:R69_has_physical_form": "https://example.com/bestand/mp4"
         },
         {
             "@id": "_:OPS001",
