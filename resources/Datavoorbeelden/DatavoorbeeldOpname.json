@@ -39,7 +39,7 @@
             "Entiteit.identificator": {
                 "@type": "Identificator",
                 "Identificator.identificator": {
-                    "@value": "video123.jpg",
+                    "@value": "video123.mp4",
                     "@type": "https://example.com/identificatortype/bestandsnaam"
                 }
             },
