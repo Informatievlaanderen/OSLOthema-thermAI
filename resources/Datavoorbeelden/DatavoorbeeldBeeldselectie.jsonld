@@ -7,8 +7,7 @@
       "geosparql": "http://www.opengis.net/ont/geosparql#",
       "Entiteit.identificator": "http://www.w3.org/ns/adms#identifier",
       "Entiteit.type": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-      "EntiteitType": "http://www.w3.org/2004/02/skos/core#Concept",
-      "Straatnaam.straatnamen": "https://docs.basisregisters.vlaanderen.be/context/straatnaam/2023-02-28/straatnaam_detail.jsonld"
+      "EntiteitType": "http://www.w3.org/2004/02/skos/core#Concept"
     }
   ],
   "@graph": [
@@ -74,10 +73,10 @@
     {
       "@id": "https://data.vlaanderen.be/id/adres/3706808",
       "@type": "Adres",
-      "straatnaam": {
+      "heeftStraatnaam": {
         "@id": "https://api.basisregisters.vlaanderen.be/v2/straatnamen/70746",
         "@type": "Straatnaam",
-        "Straatnaam.straatnamen": {
+        "straatnaam": {
           "@value": "Koningin Maria Hendrikaplein",
           "@language": "nl"
         }
@@ -93,5 +92,7 @@
         }
       }
     }
+  ]
+}
   ]
 }
