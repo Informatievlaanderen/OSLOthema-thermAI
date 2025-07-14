@@ -6,8 +6,7 @@
       "weg": "https://data.vlaanderen.be/ns/weg#",
       "Entiteit.identificator": "http://www.w3.org/ns/adms#identifier",
       "Entiteit.type": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-      "EntiteitType": "http://www.w3.org/2004/02/skos/core#Concept",
-      "GNSSOntvanger": "https://www.fair-gnss.oma.be/gnss-dcat-ap/vocabulary/geo#GNSSReceiver"
+      "EntiteitType": "http://www.w3.org/2004/02/skos/core#Concept"
     }
   ],
   "@graph": [
