@@ -1,0 +1,115 @@
+{
+  "@context": [
+    "https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22/context/thermografische-gebouwanalyse.jsonld",
+    {
+      "ifc": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#",
+      "SpatialElement.relContainedInSpatialStructure": {
+        "@reverse": "ifc:relatingStructure__IfcRelContainedInSpatialStructure"
+      }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "_:OBV002",
+      "@type": "Observatieverzameling",
+      "Observatieverzameling.geobserveerdObject": {
+        "@id": "_:GEB001"
+      },
+      "Observatie.geobserveerdKenmerk": {
+        "@id": "https://example.com/concept/kenmerktype/warmteverliesklasse"
+      },
+      "Observatieverzameling.heeftLid": [
+        {
+          "@id": "_:OBS005"
+        }
+      ]
+    },
+    {
+      "@id": "_:OBS005",
+      "@type": "Observatie",
+      "Observatie.type": {
+        "@id": "https://example.com/concept/observatietype/classificatie"
+      },
+      "Observatie.geobserveerdKenmerk": {
+        "@id": "https://example.com/concept/kenmerktype/warmteverliesklasse"
+      },
+      "Observatie.geobserveerdObject": {
+        "@id": "_:VEN001"
+      },
+      "Observatie.resultaat": {
+        "@id": "https://example.com/concept/warmteverliesklasse/hoog"
+      },
+      "Observatie.gebruikteProcedure": {
+        "@type": "Observatieprocedure",
+        "Observatieprocedure.input": [
+          {
+            "@id": "_:OBS004"
+          },
+          {
+            "@id": "_:INP001"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:OBS004",
+      "@type": "Observatie",
+      "Observatie.type": {
+        "@id": "https://example.com/concept/observatietype/meting"
+      },
+      "Observatie.geobserveerdKenmerk": {
+        "@id": "https://example.com/concept/kenmerktype/warmteverlies"
+      },
+      "Observatie.geobserveerdObject": {
+        "@id": "_:VEN001"
+      },
+      "Observatie.resultaat": {
+        "@type": "KwantitatieveWaarde",
+        "KwantitatieveWaarde.waarde": {
+          "@value": 3.75
+        },
+        "KwantitatieveWaarde.eenheid": {
+          "@id": "http://qudt.org/vocab/unit/DEG_C",
+          "@type": "Eenheid"
+        }
+      },
+      "Observatie.gebruikteProcedure": {
+        "@type": "Observatieprocedure",
+        "Observatieprocedure.input": [
+          {
+            "@id": "_:MAN003"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "_:INP001",
+      "@type": "Input",
+      "Input.type": {
+        "@id": "https://example.com/concept/inputtype/warmteverlies_drempelwaarde"
+      },
+      "Input.referentie": {
+        "@type": "KwantitatieveWaarde",
+        "KwantitatieveWaarde.waarde": {
+          "@value": 3.5
+        },
+        "KwantitatieveWaarde.eenheid": {
+          "@id": "http://qudt.org/vocab/unit/DEG_C",
+          "@type": "Eenheid"
+        }
+      }
+    },
+    {
+      "@id": "_:GEB001",
+      "@type": "BIM_Gebouw",
+      "SpatialElement.relContainedInSpatialStructure": {
+        "@type": "ifc:RelContainedInSpatialStructure",
+        "ifc:relatedElements_IfcRelContainedInSpatialStructure": [
+          {
+            "@id": "_:VEN001"
+          }
+        ]
+      }
+    }
+  ]
+}
