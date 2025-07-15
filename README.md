@@ -35,7 +35,7 @@ Diverse resources:
 
 ## Issues
 
-Via de tab [issues](https://github.com/Informatievlaanderen/OSLOthema-energiehuis/issues) kan je opmerkingen en feedback over het model geven.
+Via de tab [issues](https://github.com/Informatievlaanderen/OSLOthema-thermAI/issues) kan je opmerkingen en feedback over het model geven.
 
 ## Publicaties
 
