@@ -33,5 +33,5 @@ Volgende specificaties worden met de volgende status voorgelegd op WG datastanda
 
 | Naam|Status|Uitgiftedatum|AP|VOC|
 | --- |--- |---|---|---|
-|Thermografische gebouwanalyse|OntwerpStandaard|20250522|[Link](https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/)|NVT|
+|Thermografische gebouwanalyse|KandidaatStandaard|20250522|[Link](https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/)|NVT|
 
