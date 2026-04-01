@@ -2,7 +2,7 @@
 {
   "name": "thermografische-gebouwanalyse",
   "type": "ap",
-  "eap": "ThermAIdebug.eap",
+  "eap": "ThermAI.eap",
   "diagram": "ThermAI",
   "template": "ThermAI-ap.j2",
   "title": "Applicatieprofiel Thermografische Gebouwanalyse",
